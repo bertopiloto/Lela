@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria de Fotos - Despedida de Solteiro da Lela</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
+        integrity="sha512-bqEjSJbDT52Tg1iJmP3p1zXWYe70IKcizSvhV5JbC2J2pRiO8ZiUZ5hLRFfeRluV7yWuF/JX5Sv6E5P0EOrC8g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #ffccff;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .gallery-container {
+            max-width: 1200px;
+            margin: 20px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            justify-items: center;
+            align-items: center;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+            width: 100%;
+            height: 300px;
+            /* Ajustar altura conforme necessário */
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+            /* Aumenta um pouco o tamanho ao passar o mouse */
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+            /* Sombra mais intensa ao passar o mouse */
+        }
+
+        .back-to-home {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .back-to-home a {
+            padding: 10px 20px;
+            background-color: #f007cd;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s, transform 0.3s;
+            cursor: pointer;
+        }
+
+        .back-to-home a:hover {
+            background-color: #e174d8;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="gallery-container">
+        <div class="gallery">
+            <!-- Adicione os itens da galeria -->
+            <div class="gallery-item" data-fancybox="gallery" href="foto1.jpeg">
+                <img src="foto1.jpeg" alt="Foto 1">
+            </div>
+            <div class="gallery-item" data-fancybox="gallery" href="foto2.jpeg">
+                <img src="foto2.jpeg" alt="Foto 2">
+            </div>
+            <div class="gallery-item" data-fancybox="gallery" href="foto3.jpeg">
+                <img src="foto3.jpeg" alt="Foto 3">
+            </div>
+            <div class="gallery-item" data-fancybox="gallery" href="foto4.jpeg">
+                <img src="foto4.jpeg" alt="Foto 4">
+            </div>
+            <div class="gallery-item" data-fancybox="gallery" href="foto5.jpeg">
+                <img src="foto5.jpeg" alt="Foto 5">
+            </div>
+            <div class="gallery-item" data-fancybox="gallery" href="foto6.jpeg">
+                <img src="foto6.jpeg" alt="Foto 6">
+            </div>
+            <div class="gallery-item" data-fancybox="gallery" href="foto7.jpeg">
+                <img src="foto7.jpeg" alt="Foto 7">
+            </div>
+            <div class="gallery-item" data-fancybox="gallery" href="foto8.jpeg">
+                <img src="foto8.jpeg" alt="Foto 8">
+            </div>
+            <div class="gallery-item" data-fancybox="gallery" href="foto9.jpeg">
+                <img src="foto9.jpeg" alt="Foto 9">
+            </div>
+            <div class="gallery-item" data-fancybox="gallery" href="foto10.jpeg">
+                <img src="foto10.jpeg" alt="Foto 10">
+            </div>
+            <div class="gallery-item" data-fancybox="gallery" href="foto11.jpeg">
+                <img src="foto11.jpeg" alt="Foto 11">
+            </div>
+            <div class="gallery-item" data-fancybox="gallery" href="foto12.jpeg">
+                <img src="foto12.jpeg" alt="Foto 12">
+            </div>
+            <div class="gallery-item" data-fancybox="gallery" href="foto13.jpeg">
+                <img src="foto13.jpeg" alt="Foto 13">
+            </div>
+            <div class="gallery-item" data-fancybox="gallery" href="foto14.jpeg">
+                <img src="foto14.jpeg" alt="Foto 14">
+            </div>
+            <div class="gallery-item" data-fancybox="gallery" href="foto15.jpeg">
+                <img src="foto15.jpeg" alt="Foto 15">
+            </div>
+        </div>
+    </div>
+
+    <!-- Botão de voltar para a página inicial -->
+    <div class="back-to-home">
+        <a href="index.html">Voltar para a Página Inicial</a>
+    </div>
+
+    <!-- Bibliotecas JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"
+        integrity="sha512-1Tw2SfG6oP4tk1sO0n5ZTX8hCU1FTeIbn/5ltDzTz9wE52D1P1T1z3XzsaCVl7N74BBLyOaZc66ABbIQv5E7RQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+
+</html>
